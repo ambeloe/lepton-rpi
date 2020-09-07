@@ -69,7 +69,7 @@ U 1 1 5F3E60F4
 P 4350 3800
 F 0 "J1" H 4350 5281 50  0000 C CNN
 F 1 "Raspberry_Pi_2_3" H 4350 5190 50  0000 C CNN
-F 2 "misc footprints:rpogi" H 4350 3800 50  0001 C CNN
+F 2 "misc footprints:rpogi2" H 4350 3800 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 4350 3800 50  0001 C CNN
 	1    4350 3800
 	1    0    0    -1  
@@ -112,7 +112,7 @@ U 1 1 5F3DC5B3
 P 8850 4000
 F 0 "U7" H 8850 4981 50  0000 C CNN
 F 1 "Flir_LEPTON" H 8850 4890 50  0000 C CNN
-F 2 "misc footprints:MOLEX_105028-1001" H 8150 4750 50  0001 C CNN
+F 2 "digikey-footprints:FLIR_Lepton_Socket_1050281001" H 8150 4750 50  0001 C CNN
 F 3 "https://cdn.sparkfun.com/datasheets/Sensors/Infrared/FLIR_Lepton_Data_Brief.pdf" H 8250 4850 50  0001 C CNN
 	1    8850 4000
 	1    0    0    -1  
@@ -263,17 +263,6 @@ Wire Wire Line
 	8150 4300 7950 4300
 Wire Wire Line
 	8150 4200 7950 4200
-$Comp
-L Oscillator:ASDMB-xxxMHz U4
-U 1 1 5F503A91
-P 5000 6650
-F 0 "U4" H 5444 6696 50  0000 L CNN
-F 1 "ASDMB-xxxMHz" H 5444 6605 50  0000 L CNN
-F 2 "Oscillator:Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm" H 5000 6650 50  0001 C CNN
-F 3 "https://abracon.com/Oscillators/ASDMB.pdf" H 5300 7100 50  0001 C CNN
-	1    5000 6650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5400 6650 6100 6650
 Wire Wire Line
@@ -774,28 +763,6 @@ F 3 "~" H 2550 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R3
-U 1 1 5F7176CB
-P 2900 1450
-F 0 "R3" H 2968 1496 50  0000 L CNN
-F 1 "22k" H 2968 1405 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2940 1440 50  0001 C CNN
-F 3 "~" H 2900 1450 50  0001 C CNN
-	1    2900 1450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R4
-U 1 1 5F71DA10
-P 3250 1450
-F 0 "R4" H 3318 1496 50  0000 L CNN
-F 1 "22k" H 3318 1405 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3290 1440 50  0001 C CNN
-F 3 "~" H 3250 1450 50  0001 C CNN
-	1    3250 1450
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+2V8 #PWR0126
 U 1 1 5F7360A6
 P 2000 1200
@@ -962,14 +929,47 @@ Connection ~ 8550 3100
 Wire Wire Line
 	8550 3100 8550 3200
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0128
 U 1 1 5F586D7C
 P 7800 3350
-F 0 "#PWR?" H 7800 3100 50  0001 C CNN
+F 0 "#PWR0128" H 7800 3100 50  0001 C CNN
 F 1 "GND" H 7805 3177 50  0000 C CNN
 F 2 "" H 7800 3350 50  0001 C CNN
 F 3 "" H 7800 3350 50  0001 C CNN
 	1    7800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Oscillator:ASDMB-xxxMHz U4
+U 1 1 5F503A91
+P 5000 6650
+F 0 "U4" H 5444 6696 50  0000 L CNN
+F 1 "ASDMB-xxxMHz" H 5444 6605 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm" H 5000 6650 50  0001 C CNN
+F 3 "https://abracon.com/Oscillators/ASDMB.pdf" H 5300 7100 50  0001 C CNN
+	1    5000 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 5F71DA10
+P 3250 1450
+F 0 "R4" H 3318 1496 50  0000 L CNN
+F 1 "22k" H 3318 1405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3290 1440 50  0001 C CNN
+F 3 "~" H 3250 1450 50  0001 C CNN
+	1    3250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 5F7176CB
+P 2900 1450
+F 0 "R3" H 2968 1496 50  0000 L CNN
+F 1 "22k" H 2968 1405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2940 1440 50  0001 C CNN
+F 3 "~" H 2900 1450 50  0001 C CNN
+	1    2900 1450
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
