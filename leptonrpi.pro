@@ -1,4 +1,4 @@
-update=9/6/2020 4:49:19 PM
+update=09/07/20 13:58:55
 version=1
 last_client=kicad
 [general]
@@ -238,7 +238,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.2
+Clearance=0.15
 TrackWidth=0.25
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -249,7 +249,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=chungus power
-Clearance=0.2
+Clearance=0.15
 TrackWidth=1
 ViaDiameter=1
 ViaDrill=0.7
