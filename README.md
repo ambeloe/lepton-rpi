@@ -1,4 +1,3 @@
 # lepton-rpi
 
-# somehow the dimensions got screwed
-# board is half a centimeter too wide; length is fine
+# dimensions are now fine, but it still shouldnt work
